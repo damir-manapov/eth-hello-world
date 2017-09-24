@@ -10,6 +10,7 @@
     "init": "./commands/init.sh",
     "geth": "./commands/geth.sh",
     "testrpc": "./commands/testrpc.sh",
+    "stop-testrpc": "./commands/stop-testrpc.sh",
     "mist": "./commands/mist.sh",
     "attach": "./commands/attach.sh",
     "test": "./commands/test.sh"
