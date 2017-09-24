@@ -1,18 +1,14 @@
-pragma solidity ^0.4.4;
+pragma solidity ^0.4.13;
 
 contract HelloWorld {
 
-    uint256 counter = 0;
+    uint256 public counter = 0;
 
-    function increase() {
+    function increase() public {
         counter++;
     }
 
-    function decrease() {
+    function decrease() public {
         counter--;
-    }
-
-    function getCounter() constant returns(uint256) {
-        return counter;
     }
 }

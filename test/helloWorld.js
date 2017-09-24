@@ -10,7 +10,7 @@ contract('HelloWorld', function (accounts) {
             hello = instance;
         })
             .then(function () {
-                return hello.getCounter.call();
+                return hello.counter.call();
             })
             .then(function (сounter) {
                 assert.equal(сounter.toNumber(), 0, " initial counter should be 0");
@@ -27,7 +27,7 @@ contract('HelloWorld', function (accounts) {
             hello = instance;
         })
             .then(function () {
-                return hello.getCounter.call();
+                return hello.counter.call();
             })
             .then(function (сounter) {
                 initialCounter = сounter.toNumber();
@@ -36,7 +36,7 @@ contract('HelloWorld', function (accounts) {
                 return hello.increase();
             })
             .then(function () {
-                return hello.getCounter.call();
+                return hello.counter.call();
             })
             .then(function (сounter) {
                 assert.equal(сounter.toNumber(), initialCounter + 1, " after increasing counter should be 1");
@@ -53,7 +53,7 @@ contract('HelloWorld', function (accounts) {
             hello = instance;
         })
             .then(function () {
-                return hello.getCounter.call();
+                return hello.counter.call();
             })
             .then(function (сounter) {
                 initialCounter = сounter.toNumber();
@@ -62,46 +62,12 @@ contract('HelloWorld', function (accounts) {
                 return hello.decrease();
             })
             .then(function () {
-                return hello.getCounter.call();
+                return hello.counter.call();
             })
             .then(function (сounter) {
                 assert.equal(сounter.toNumber(), initialCounter - 1, " after increasing counter should be 1");
             });
 
     });
-
-    // it("should increase and decrease correctly", function () {
-    //
-    //     var hello;
-    //
-    //     return HelloWorld.deployed().then(function (instance) {
-    //         hello = instance;
-    //     })
-    //         .then(function () {
-    //             return hello.getCounter.call();
-    //         })
-    //         .then(function (сounter) {
-    //             assert.equal(сounter.toNumber(), 0, " initial counter should be 0");
-    //         })
-    //         .then(function () {
-    //             return hello.increase();
-    //         })
-    //         .then(function () {
-    //             return hello.getCounter.call();
-    //         })
-    //         .then(function (сounter) {
-    //             assert.equal(сounter.toNumber(), 1, " after increasing counter should be 1");
-    //         })
-    //         .then(function () {
-    //             return hello.decrease();
-    //         })
-    //         .then(function () {
-    //             return hello.getCounter.call();
-    //         })
-    //         .then(function (сounter) {
-    //             assert.equal(сounter.toNumber(), 0, " after decreasing counter should be 0 again");
-    //         });
-    //
-    // });
 
 });

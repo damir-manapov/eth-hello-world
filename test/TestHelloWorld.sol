@@ -1,4 +1,4 @@
-pragma solidity ^0.4.2;
+pragma solidity ^0.4.13;
 
 import "truffle/Assert.sol";
 import "truffle/DeployedAddresses.sol";
@@ -10,11 +10,11 @@ contract TestHelloWorld {
 
     HelloWorld hello = new HelloWorld();
 
-    Assert.equal(hello.getCounter(), 0, "Initial counter should be 0");
+    Assert.equal(hello.counter(), 0, "Initial counter should be 0");
 
     hello.increase();
 
-    Assert.equal(hello.getCounter(), 1, "After increasing counter should be 1");
+    Assert.equal(hello.counter(), 1, "After increasing counter should be 1");
 
   }
 
@@ -22,15 +22,15 @@ contract TestHelloWorld {
 
     HelloWorld hello = new HelloWorld();
 
-    Assert.equal(hello.getCounter(), 0, "Initial counter should be 0");
+    Assert.equal(hello.counter(), 0, "Initial counter should be 0");
 
     hello.increase();
 
-    Assert.equal(hello.getCounter(), 1, "After increasing counter should be 1");
+    Assert.equal(hello.counter(), 1, "After increasing counter should be 1");
 
     hello.decrease();
 
-    Assert.equal(hello.getCounter(), 0, "After decreasing counter should be 0 again");
+    Assert.equal(hello.counter(), 0, "After decreasing counter should be 0 again");
 
   }
 
