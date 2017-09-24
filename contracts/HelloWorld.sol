@@ -1,5 +1,7 @@
-pragma solidity ^0.4.13;
+pragma solidity ^0.4.4;
+
 contract HelloWorld {
+
     uint256 counter = 0;
 
     function increase() {

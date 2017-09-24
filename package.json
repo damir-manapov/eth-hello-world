@@ -1,0 +1,17 @@
+{
+  "name": "eth-hello-world",
+  "version": "1.0.0",
+  "description": "Ethereum Hello World Application",
+  "main": "index.js",
+  "repository": "git@github.com:damir-manapov/eth-hello-world.git",
+  "author": "Damir <tebuchet@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "init": "./commands/init.sh",
+    "geth": "./commands/geth.sh",
+    "testrpc": "./commands/testrpc.sh",
+    "mist": "./commands/mist.sh",
+    "attach": "./commands/attach.sh",
+    "test": "./commands/test.sh"
+  }
+}
