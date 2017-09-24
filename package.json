@@ -7,7 +7,7 @@
   "author": "Damir <tebuchet@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "init": "./commands/init.sh",
+    "initchain": "./commands/initchain.sh",
     "geth": "./commands/geth.sh",
     "testrpc": "./commands/testrpc.sh",
     "stop-testrpc": "./commands/stop-testrpc.sh",
