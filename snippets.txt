@@ -3,10 +3,15 @@
         web3.personal.newAccount("passphrase");
     Permanent unlock account
         web3.personal.unlockAccount("address", "passphrase", 0);
+        web3.personal.unlockAccount(eth.accounts[0], "passphrase", 0);
+        web3.personal.unlockAccount(eth.accounts[1], "passphrase", 0);
 
     Geth
         miner.start(3)
         eth.accounts
         miner.setEtherbase(eth.accounts[0])
-        eth.getBalance(eth.coinbase).toNumber();
+        eth.getBalance(eth.coinbase)
         eth.coinbase
+        web3.toWei(1, "ether")
+        eth.sendTransaction({from: eth.accounts[0], to: eth.accounts[1], value: web3.toWei(1, "ether")})
+        eth.pendingTransactions
